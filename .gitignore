@@ -21,3 +21,5 @@
 /coverage
 
 .env
+/public/packs
+/node_modules

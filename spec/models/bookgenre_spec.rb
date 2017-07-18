@@ -1,5 +1,13 @@
 require "rails_helper"
 
+describe Bookgenre do
+  it { should belong_to(:book) }
+  it { should belong_to(:genre) }
+
+  it { should_not have_valid(:book).when(nil) }
+  it { should_not have_valid(:genre).when(nil) }
+end
+
 RSpec.describe 'Bookgenre' do
   context 'makes a relation between book and genre' do
     let(:book) { Book.new(title: "Game of Thrones", author: "George R.R. Martin", page_number: 800, summary: "First book in the Song of Ice and Fire series.", cover_url: "https://images-na.ssl-images-amazon.com/images/I/51bcsc2fcFL.jpg") }

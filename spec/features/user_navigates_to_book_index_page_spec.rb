@@ -9,13 +9,14 @@ to the sign up page
 =end
 
 feature 'user navigates books index page' do
-  scenario 'user navigates from home index page to books index page', pending: true do
-    visit root_path #this is not set up yet in the master
-    click_link 'Books'
-
-    expect(page).to have('Book List')
-    expect(page).to have_link('Add Book')
-  end
+  # **when we have all pages up and tested these tests will be uncommented**
+  # scenario 'user navigates from home index page to books index page', pending: true do
+  #   visit root_path #this is not set up yet in the master
+  #   click_link 'Books'
+  #
+  #   expect(page).to have('Book List')
+  #   expect(page).to have_link('Add Book')
+  # end
 
   scenario 'an *authenticated* user clicks on add-book link' do
     visit books_path
@@ -24,11 +25,11 @@ feature 'user navigates books index page' do
     expect(page).to have_content('Add New Book Form')
   end
 
-  scenario 'an *unauthenticated* user clicks on add-book link', pending:true do
-    visit books_path
-    click_link 'Add Book'
-
-    expect(page).to have_content('Sign Up')
-  end
+  # scenario 'an *unauthenticated* user clicks on add-book link', pending: true do
+  #   visit books_path
+  #   click_link 'Add Book'
+  #
+  #   expect(page).to have_content('Sign Up')
+  # end
 
 end

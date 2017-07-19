@@ -11,11 +11,11 @@
   <body>
     <nav>
       <% if user_signed_in? %>
-        <li>
+        <div>
           <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-        </li>
+        </div>
       <% else %>
-        <li>
+        <div>
           <%= link_to 'Sign Up', new_user_registration_path %>
         </li>
         <li>
@@ -23,14 +23,6 @@
         </li>
       <% end %>
     </nav>
-
-    <% if flash.any? %>
-      <div class="flash">
-        <div class="container">
-          <%= flash[:notice] %>
-        </div>
-      </div>
-    <% end %>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>

@@ -10,6 +10,9 @@
     <%= f.input :email, label: 'Email', required: true, autofocus: true %>
     <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
     <%= f.input :password_confirmation, label: 'Password Confirmation', required: true %>
+    <div>
+      <%= f.input :profile_photo, type: :file, required: true %>
+    </div>
   </div>
 
   <div class="form-actions">

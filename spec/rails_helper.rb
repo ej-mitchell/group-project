@@ -57,8 +57,8 @@ RSpec.configure do |config|
 end
 require "capybara/rails"
 require "valid_attribute"
+include Warden::Test::Helpers
 
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
 end
-

@@ -22,7 +22,7 @@ feature "sign in" do
       fill_in 'Password', with: 'password'
       click_button 'Log in'
 
-      expect(page).to have_content('Invalid email or password.')
+      expect(page).to have_content('Invalid Email or password.')
       expect(page).to_not have_content('Signed in successfully.')
       expect(page).to_not have_content('Sign Out')
     end

@@ -262,16 +262,16 @@ UnderscorePrefixedVariableName:
 Void:
   Enabled: false
 
-layout/AlignParameters:
+Style/AlignParameters:
   EnforcedStyle: with_fixed_indentation
 
 Style/SymbolProc:
   Enabled: false
 
-Layout/MultilineOperationIndentation:
+Style/MultilineOperationIndentation:
   EnforcedStyle: indented
 
-Layout/EmptyLinesAroundBlockBody:
+Style/EmptyLinesAroundBlockBody:
   Enabled: false
 
 Style/UnneededPercentQ:

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170718175354) do
+ActiveRecord::Schema.define(version: 20170719193025) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20170718175354) do
     t.string "average_rating", default: "0"
     t.text "summary", null: false
     t.string "cover_url", default: "http://webneel.com/sites/default/files/images/download/thumb/old-book-with-blank-cover%201_0.jpg"
+    t.integer "user_id", null: false
   end
 
   create_table "genres", force: :cascade do |t|
@@ -39,6 +40,7 @@ ActiveRecord::Schema.define(version: 20170718175354) do
     t.bigint "book_id"
     t.string "rating", null: false
     t.text "text_body", null: false
+    t.integer "user_id", null: false
     t.index ["book_id"], name: "index_reviews_on_book_id"
   end
 
@@ -65,6 +67,7 @@ ActiveRecord::Schema.define(version: 20170718175354) do
   create_table "votes", force: :cascade do |t|
     t.bigint "review_id", null: false
     t.integer "value", default: 0, null: false
+    t.integer "user_id", null: false
     t.index ["review_id"], name: "index_votes_on_review_id"
   end
 

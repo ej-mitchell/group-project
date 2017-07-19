@@ -1,5 +1,4 @@
 require 'rails_helper'
-
 =begin
 [] If I am authenticated, I can fill in the new book form
 [] When I submit the new book form, I will be redirected to the book's show page
@@ -8,6 +7,9 @@ require 'rails_helper'
 
 feature 'user fills out new book form' do
   scenario 'user fills in information' do
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user)
+
     visit new_book_path
 
     fill_in "Title", with: "a title"
@@ -21,6 +23,9 @@ feature 'user fills out new book form' do
   end
 
   scenario 'user submits without filling in information' do
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user)
+    
     visit new_book_path
 
     click_button "Submit"

@@ -1,5 +1,5 @@
 class Book < ApplicationRecord
-  # belongs_to :user
+  belongs_to :user
   has_many :bookgenres
   # has_many :reviews
 
@@ -9,5 +9,5 @@ class Book < ApplicationRecord
   validates :page_number, numericality: true
   validates :summary, length: { minimum: 10, maximum: 2000 }
   validates :cover_url, presence: true
-
+  validates :user_id, presence: true
 end

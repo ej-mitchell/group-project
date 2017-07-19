@@ -9,6 +9,18 @@
   </head>
 
   <body>
+    <nav>
+      <% if user_signed_in? %>
+        <li>
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to 'Sign Up', new_user_registration_path %>
+        </li>
+      <% end %>
+    </nav>
+
     <% if flash.any? %>
       <div class="flash">
         <div class="container">
@@ -17,6 +29,8 @@
       </div>
     <% end %>
 
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>

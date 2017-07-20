@@ -10,6 +10,8 @@ gem 'webpacker', '~> 2.0'
 gem 'simple_form'
 gem 'devise'
 gem 'foundation-rails'
+gem 'carrierwave'
+gem "mini_magick"
 
 group :test do
   gem 'coveralls', require: false
@@ -35,6 +37,8 @@ end
 
 group :production do
   gem 'rails_12factor'
+  gem 'carrierwave'
+  gem "mini_magick"
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

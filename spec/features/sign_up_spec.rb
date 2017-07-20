@@ -11,6 +11,7 @@ feature "sign up" do
     fill_in 'Email', with: 'user@example.com'
     fill_in 'user_password', with: 'password'
     fill_in 'Password Confirmation', with: 'password'
+    attach_file 'user_profile_photo', "#{Rails.root}/spec/support/images/photo.jpg"
     click_button 'Sign Up'
 
     expect(page).to have_content("You're in!")

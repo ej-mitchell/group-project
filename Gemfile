@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'webpacker', '~> 2.0'
 gem 'simple_form'
 gem 'devise'
+gem 'foundation-rails'
 gem 'carrierwave'
 gem "mini_magick"
 

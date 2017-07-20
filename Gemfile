@@ -12,6 +12,7 @@ gem 'devise'
 gem 'foundation-rails'
 gem 'carrierwave'
 gem "mini_magick"
+gem 'active_model_serializers'
 
 group :test do
   gem 'coveralls', require: false

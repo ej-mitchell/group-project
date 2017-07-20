@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170719193025) do
+ActiveRecord::Schema.define(version: 20170720192318) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 20170719193025) do
   create_table "bookgenres", force: :cascade do |t|
     t.bigint "book_id", null: false
     t.bigint "genre_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["book_id"], name: "index_bookgenres_on_book_id"
     t.index ["genre_id"], name: "index_bookgenres_on_genre_id"
   end
@@ -30,10 +32,14 @@ ActiveRecord::Schema.define(version: 20170719193025) do
     t.text "summary", null: false
     t.string "cover_url", default: "http://webneel.com/sites/default/files/images/download/thumb/old-book-with-blank-cover%201_0.jpg"
     t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "genres", force: :cascade do |t|
     t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -41,6 +47,8 @@ ActiveRecord::Schema.define(version: 20170719193025) do
     t.string "rating", null: false
     t.text "text_body", null: false
     t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["book_id"], name: "index_reviews_on_book_id"
   end
 
@@ -69,6 +77,8 @@ ActiveRecord::Schema.define(version: 20170719193025) do
     t.bigint "review_id", null: false
     t.integer "value", default: 0, null: false
     t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["review_id"], name: "index_votes_on_review_id"
   end
 

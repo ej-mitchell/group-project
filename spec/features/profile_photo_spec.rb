@@ -13,7 +13,7 @@ feature "profile photo" do
     fill_in "Password Confirmation", with: "boomstick!3vilisd3ad"
     attach_file 'user_profile_photo', "#{Rails.root}/spec/support/images/photo.jpg"
     click_button "Sign Up"
-    # save_and_open_page
+    
     expect(page).to have_content("You're in!")
     expect(page).to have_content("Sign Out")
     expect(page).to have_css("img[src*='photo.jpg']")

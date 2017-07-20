@@ -25,7 +25,7 @@ feature 'user fills out new book form' do
   scenario 'user submits without filling in information' do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
-    
+
     visit new_book_path
 
     click_button "Submit"

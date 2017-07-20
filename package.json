@@ -1,6 +1,9 @@
 {
   "name": "group_project",
   "private": true,
+  "scripts": {
+    "start": "./bin/webpack-dev-server"
+  },
   "dependencies": {
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.25.0",
@@ -37,4 +40,6 @@
   "devDependencies": {
     "webpack-dev-server": "^2.5.1"
   }
+
+
 }

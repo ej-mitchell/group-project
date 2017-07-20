@@ -251,11 +251,8 @@ DEPENDENCIES
   coveralls
   devise
   factory_girl_rails
-<<<<<<< HEAD
   faker!
-=======
   foundation-rails
->>>>>>> master
   jquery-rails
   launchy
   listen (~> 3.0.5)

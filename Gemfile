@@ -38,8 +38,6 @@ end
 
 group :production do
   gem 'rails_12factor'
-  gem 'carrierwave'
-  gem "mini_magick"
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

@@ -9,7 +9,7 @@ gem 'jquery-rails'
 gem 'webpacker', '~> 2.0'
 gem 'simple_form'
 gem 'devise'
-gem "carrierwave"
+gem 'carrierwave'
 gem "mini_magick"
 
 group :test do
@@ -36,6 +36,8 @@ end
 
 group :production do
   gem 'rails_12factor'
+  gem 'carrierwave'
+  gem "mini_magick"
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

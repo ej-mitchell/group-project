@@ -1,6 +1,8 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  ##configuring our local host for Heroku##
+  config.action_mailer.default_url_options = { host: 'https://safe-brushlands-67010.herokuapp.com/', port: 3000 }
   # Code is not reloaded between requests.
   config.cache_classes = true
 

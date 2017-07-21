@@ -34,6 +34,7 @@ class BookIndexContainer extends React.Component {
       <div>
         <h1>Books by Title</h1>
         {bookMap}
+      
       </div>
     )
   }

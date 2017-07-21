@@ -19,7 +19,7 @@ feature 'user fills out new book form' do
 
     click_button "Submit"
 
-    expect(page).to have_content("a title")
+    expect(page).to have_content("Book was successfully added")
   end
 
   scenario 'user submits without filling in information' do

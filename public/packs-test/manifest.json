@@ -1,4 +1,6 @@
 {
+  "app.js": "/packs-test/app.js",
   "application.js": "/packs-test/application.js",
-  "hello_react.js": "/packs-test/hello_react.js"
+  "book_index.js": "/packs-test/book_index.js",
+  "book_show.js": "/packs-test/book_show.js"
 }

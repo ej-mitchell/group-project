@@ -13,8 +13,8 @@ class BookShowContainer extends React.Component {
   }
 
   componentDidMount() {
-    // let bookId = this.props.params.id;
-    fetch(`/api/v1/books/6`)
+    let bookId = this.props.params.id;
+    fetch(`/api/v1/books/${bookId}`)
       .then(response => {
         return response.json()})
       .then(body => {

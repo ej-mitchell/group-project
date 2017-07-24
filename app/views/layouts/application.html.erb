@@ -6,6 +6,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
   </head>
 
   <body>
@@ -52,6 +53,7 @@
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <div id='react-app'></div>
     <%= yield %>
   </body>
 </html>

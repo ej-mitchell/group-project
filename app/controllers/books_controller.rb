@@ -27,13 +27,17 @@ class BooksController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @book = Book.find(params[:id])
 
-    @book.destroy
-    redirect_to books_path
+    if @book.destroy
+      flash[:notice] = 'Book has been burned.'
+      redirect_to books_path
+    end
   end
 
+  private
+  
   def book_params
     params.require(:book).permit(:title, :author, :page_number, :summary, :cover_url, :user_id)
   end

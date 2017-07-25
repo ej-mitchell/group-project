@@ -9,6 +9,7 @@ class ReviewsController < ApplicationController
     @book = Book.find(params[:book_id])
 
     if @review.save
+      ReviewMailer.new_review(@review).deliver_now
       redirect_to book_path(@review.book_id), notice: "Review was added successfully!"
     else
       render :new

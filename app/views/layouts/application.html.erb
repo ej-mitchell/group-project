@@ -15,7 +15,7 @@
       <nav class="top-bar" data-topbar role="navigate">
         <ul class="title-area">
           <li class="name">
-            <h1><a href="page-top"> company name </a></h1>
+            <h1><a href="/"> Between the Covers </a></h1>
             </h1>
           </li>
         </ul>
@@ -37,14 +37,7 @@
             </li>
           </ul>
           <ul>
-            <ul class="has-dropdown">
-              <a href="#">Books</a>
-              <ul class="dropdown">
-                <li> <a href="#">link 1</a> </li>
-                <li> <a href="#">link 2</a> </li>
-              </ul>
-            </ul>
-
+            <li><%= link_to 'Books', books_path %></li>
           </ul>
 
         </section>
@@ -53,6 +46,7 @@
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <br><br>
     <div id='react-app'></div>
     <%= yield %>
   </body>

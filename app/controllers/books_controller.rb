@@ -3,6 +3,10 @@ class BooksController < ApplicationController
   # before_action :authenticate_user, only: [:new, :create]
 
   def index
+    @book = Book.search(params[:search])
+    if @book
+      redirect_to :controller => 'api/v1/books', :action => 'index', :search => params[:search]
+    end
   end
 
   def show
@@ -39,7 +43,7 @@ class BooksController < ApplicationController
   private
   
   def book_params
-    params.require(:book).permit(:title, :author, :page_number, :summary, :cover_url, :user_id)
+    params.require(:book).permit(:title, :author, :page_number, :summary, :cover_url, :user_id, :search, :field)
   end
 
   def authorize_user

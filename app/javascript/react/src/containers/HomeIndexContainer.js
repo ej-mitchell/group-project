@@ -25,7 +25,7 @@ class HomeIndexContainer extends React.Component {
         <BookHomeTile
           key = {book.id}
           id = {book.id}
-          image = {book.cover_url}
+          image = {book.cover_photo.thumb.url}
           title = {book.title}
           author = {book.author}
           created= {book.created_at}

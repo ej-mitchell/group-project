@@ -15,7 +15,7 @@ end
 describe 'Review' do
   context 'create a book review' do
     let(:user){ FactoryGirl.build(:user) }
-    let(:book) { Book.new(title: "Game of Thrones", author: "George R.R. Martin", page_number: 800, summary: "First book in the Song of Ice and Fire series.", cover_url: "https://images-na.ssl-images-amazon.com/images/I/51bcsc2fcFL.jpg", user: user) }
+    let(:book) { Book.new(title: "Game of Thrones", author: "George R.R. Martin", page_number: 800, summary: "First book in the Song of Ice and Fire series.", cover_photo: "https://images-na.ssl-images-amazon.com/images/I/51bcsc2fcFL.jpg", user: user) }
     let(:review) { Review.new(rating: "3", text_body: "Oh em geeee, it was so gooood.", book: book, user: user) }
 
     it 'has a rating and text' do

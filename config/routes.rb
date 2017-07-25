@@ -8,13 +8,14 @@ Rails.application.routes.draw do
   end
 
   resources :users do
-    resources :books, except: [:index, :show, :new, :create]
     resources :reviews, only: [:edit, :update, :destroy]
   end
 
-  resources :books, only: [:index, :show, :new, :create] do
+  resources :books do
     resources :reviews, only: [:new, :create]
   end
+
+  resources :reviews, only: [:index, :destroy]
 
   namespace :api do
     namespace :v1 do

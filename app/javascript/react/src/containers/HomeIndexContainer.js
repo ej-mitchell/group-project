@@ -1,6 +1,5 @@
 import React from 'react';
 import BookHomeTile from '../components/BookHomeTile'
-import { Link } from 'react-router'
 
 class HomeIndexContainer extends React.Component {
   constructor(props) {
@@ -34,7 +33,6 @@ class HomeIndexContainer extends React.Component {
     })
     return (
       <div>
-        <Link to='/books'>Books</Link>
         {bookHomeTiles}
       </div>
 

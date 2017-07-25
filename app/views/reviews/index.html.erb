@@ -1,0 +1,6 @@
+<h1>Review Incinerator</h1>
+<ul>
+<% @reviews.each do |review| %>
+  <li><%= review.text_body %><%= button_to "Incinerate", review_path(review.id), method: :delete %></li>
+<% end %>
+</ul>

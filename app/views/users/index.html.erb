@@ -1,0 +1,7 @@
+<h1>Book Burning Page</h1>
+
+<ul>
+<% @books.each do |book| %>
+  <li><%= book.title %><%= button_to "Burn Book", book_path(book.id), method: :delete %></li>
+<% end %>
+</ul>

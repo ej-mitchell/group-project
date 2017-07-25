@@ -8,7 +8,7 @@ const BookHomeTile = (props) => {
         <h4>{props.title}</h4>
         <p>{props.author}</p>
         <p>{props.created}</p>
-        <img src={props.image}></img>
+        <img src={props.image} height='120' width='120'></img>
       </Link>
     </div>
   )

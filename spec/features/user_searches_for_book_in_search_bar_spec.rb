@@ -14,7 +14,6 @@ feature 'user fills in search bar' do
   scenario 'user can find a title' do
     user = FactoryGirl.create(:user)
     book = Book.create(title: "Bob", author: "Saget", page_number: 800, summary: "A book about Bob.", user_id: user.id)
-
     visit books_path
 
     fill_in 'search', with: book.title

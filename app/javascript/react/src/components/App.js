@@ -7,7 +7,6 @@ import HomeIndexContainer from '../containers/HomeIndexContainer';
 const App = props => {
   return(
     <div>
-      <h1>Welcome to our site!</h1>
       <Router history={browserHistory}>
         <Route path="/" component={HomeIndexContainer}/>
         <Route path='/books/:id' component={BookShowContainer}/>

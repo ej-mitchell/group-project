@@ -1,4 +1,7 @@
 class BooksController < ApplicationController
+  before_action :authorize_user, only: [:delete]
+  # before_action :authenticate_user, only: [:new, :create]
+
   def index
     @book = Book.search(params[:search])
     if @book
@@ -28,8 +31,26 @@ class BooksController < ApplicationController
     end
   end
 
+  def destroy
+    @book = Book.find(params[:id])
+
+    if @book.destroy
+      flash[:notice] = 'Book has been burned.'
+      redirect_to books_path
+    end
+  end
+
+  private
+  
   def book_params
     params.require(:book).permit(:title, :author, :page_number, :summary, :cover_url, :user_id, :search, :field)
   end
+
+  def authorize_user
+    if !current_user.admin?
+      raise ActionController::RoutingError.new("Not Found")
+    end
+  end
+
 
 end

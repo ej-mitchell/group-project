@@ -18,13 +18,6 @@ feature 'user navigates books index page' do
   #   expect(page).to have_link('Add Book')
   # end
 
-  scenario 'an *authenticated* user clicks on add-book link' do
-    visit books_path
-    click_link 'Add Book'
-
-    expect(page).to have_content('Add New Book Form')
-  end
-
   # scenario 'an *unauthenticated* user clicks on add-book link', pending: true do
   #   visit books_path
   #   click_link 'Add Book'

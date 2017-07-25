@@ -23,14 +23,14 @@ RSpec.describe Api::V1::BooksController, type: :controller do
     end
   end
 
-  describe 'GET#show', pending: true do
+  describe 'GET#show' do
     it 'should return a specific book and related reviews' do
-      get :show, id: book.id
+      get :show, params: { id: book.id }
       returned_json = JSON.parse(response.body)
 
       expect(response.status).to eq 200
       expect(response.content_type).to eq("application/json")
-
+      expect(returned_json["book"]["title"]).to eq("A book")
     end
   end
 end

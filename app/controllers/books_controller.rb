@@ -1,8 +1,9 @@
 class BooksController < ApplicationController
   def index
-     
     @book = Book.search(params[:search])
-    redirect_to :controller => 'api/v1/books', :action => 'index', :search => params[:search]
+    if @book
+      redirect_to :controller => 'api/v1/books', :action => 'index', :search => params[:search]
+    end
   end
 
   def show

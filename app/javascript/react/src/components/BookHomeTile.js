@@ -6,7 +6,7 @@ const BookHomeTile = (props) => {
     <div>
       <Link to = {`/books/${props.id}`}>
         <h4>{props.title}</h4>
-        <p>{props.author}</p>
+        <h5>{props.author}</h5>
         <p>{props.created}</p>
         <img src={props.image}></img>
       </Link>

@@ -1,6 +1,7 @@
 import React from 'react';
 import BookShowTile from '../components/BookShowTile'
 import ReviewTile from '../components/ReviewTile'
+import { Link } from 'react-router'
 
 
 class BookShowContainer extends React.Component {
@@ -36,20 +37,28 @@ class BookShowContainer extends React.Component {
       )
 
     })
-    return (
-      <div>
-        <h1>{this.state.book.title}</h1>
-        <BookShowTile
-          key={this.state.book.id}
-          id={this.state.book.id}
-          title={this.state.book.title}
-          pages={this.state.book.page_number}
-          summary={this.state.book.summary}
-        />
-        <h1>Reviews</h1>
-        {mapOfReviews}
-      </div>
-    )
+
+    if (this.props.params.id !== "new") {
+      return (
+        <div>
+          <h1>{this.state.book.title}</h1>
+          <BookShowTile
+            key={this.state.book.id}
+            id={this.state.book.id}
+            title={this.state.book.title}
+            pages={this.state.book.page_number}
+            summary={this.state.book.summary}
+          />
+          <h1>Reviews</h1>
+          <a href={`/books/${this.props.params.id}/reviews/new`}>Add new review</a>
+          {mapOfReviews}
+        </div>
+      )
+    } else {
+      return (
+        <p></p>
+      )
+    }
   }
 }
 

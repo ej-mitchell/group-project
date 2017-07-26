@@ -27,7 +27,6 @@ class HomeIndexContainer extends React.Component {
           image = {book.cover_url}
           title = {book.title}
           author = {book.author}
-          created= {book.created_at}
         />
       )
     })

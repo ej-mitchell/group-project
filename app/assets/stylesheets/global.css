@@ -1,9 +1,11 @@
 .book-home-tile{
   text-align: center;
-  border: 1px solid black;
   background: white;
   padding-top: 10px;
+  padding-bottom: 10px;
   text: white;
+  width: 300px;
+  box-shadow: 10px 10px 5px #484848;
 }
 
 .top-bar{
@@ -15,8 +17,10 @@ body{
 }
 
 .book-tile{
-  border: 1px solid black;
   text-align: center;
+  width: 500px;
+  background: white;
+  box-shadow: 10px 10px 5px #484848;
 }
 
 p{
@@ -39,4 +43,7 @@ p{
   width: 30px;
   height: 30px;
   padding-top: 10px;
+}
+.search-bar{
+  background: #b22222;
 }

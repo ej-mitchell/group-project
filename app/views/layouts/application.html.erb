@@ -49,11 +49,18 @@
         </section>
       </nav>
     </div>
-
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <br><br>
     <div id='react-app'></div>
     <%= yield %>
+    <div class="search-bar">
+      <%= form_tag books_path, method: 'get' do %>
+      <p>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search", title: nil %>
+      </p>
+      <% end %>
+    </div>
   </body>
 </html>

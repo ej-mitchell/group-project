@@ -3,6 +3,7 @@
   border: 1px solid black;
   background: white;
   padding-top: 10px;
+  text: white;
 }
 
 .top-bar{
@@ -12,12 +13,10 @@
 body{
   background: #FFF8DC;
 }
-a{
-  background: #B22222;
-}
 
-.nav-button{
-  background: #B22222;
+.book-tile{
+  border: 1px solid black;
+  text-align: center;
 }
 
 p{
@@ -29,9 +28,12 @@ p{
 }
 
 .book-image{
-  width: 200px;
+  width: 150px;
 }
 
+.show-cover{
+  width: 200px;
+}
 
 .picture{
   width: 30px;

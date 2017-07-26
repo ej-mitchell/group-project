@@ -2,6 +2,7 @@
   "name": "group_project",
   "private": true,
   "scripts": {
+    "test": "./node_modules/karma/bin/karma start karma.conf.js",
     "start": "./bin/webpack-dev-server"
   },
   "dependencies": {
@@ -30,7 +31,6 @@
     "rails-erb-loader": "^5.0.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-router": "^2.0.0",
     "resolve-url-loader": "^2.1.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
@@ -39,6 +39,19 @@
     "webpack-merge": "^4.1.0"
   },
   "devDependencies": {
+    "babel-polyfill": "^6.23.0",
+    "enzyme": "^2.9.1",
+    "jasmine-core": "^2.6.4",
+    "jasmine-enzyme": "^3.6.1",
+    "karma": "^1.7.0",
+    "karma-cli": "^1.0.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-webpack": "^2.0.4",
+    "phantomjs-prebuilt": "^2.1.14",
+    "react-addons-test-utils": "^15.6.0",
+    "react-router": "^2.8.1",
+    "react-test-renderer": "^15.6.1",
     "webpack-dev-server": "^2.5.1"
   }
 }

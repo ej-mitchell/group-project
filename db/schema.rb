@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170724182929) do
+ActiveRecord::Schema.define(version: 20170726170454) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20170724182929) do
     t.integer "page_number", null: false
     t.string "average_rating", default: "0"
     t.text "summary", null: false
-    t.string "cover_url", default: "http://webneel.com/sites/default/files/images/download/thumb/old-book-with-blank-cover%201_0.jpg"
+    t.string "cover_url", default: "http://cyclopaedia.org/mosaique/davis538black200.jpg"
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

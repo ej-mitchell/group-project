@@ -1,5 +1,6 @@
 <%= form_for [@book] do |f| %>
 
+<div class='column column-block'>
   <% if @book.errors.any? %>
     <div id="error_explanation-books">
       <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
@@ -11,7 +12,6 @@
       </ul>
     </div>
   <% end %>
-
   <div class="book-body">
     <%= f.label :title, 'Title' %>
     <div class="book-title input">
@@ -26,7 +26,7 @@
     </div>
   </div>
 
-  <div class="book-page_number">
+  <div class="book-page-number">
     <%= f.label :page_number, "Number of Pages" %>
     <div class="book-page_number input">
       <%= f.text_field :page_number %>
@@ -53,3 +53,4 @@
     <%= f.submit 'Submit', class: 'button' %>
   </div>
 <% end %>
+</div>

@@ -8,6 +8,7 @@ class ReviewsController < ApplicationController
   def new
     @review = Review.new
     @book = Book.find(params[:book_id])
+    @star_collection = Review::STARS
   end
 
   def create
@@ -18,6 +19,7 @@ class ReviewsController < ApplicationController
       ReviewMailer.new_review(@review).deliver_now
       redirect_to book_path(@review.book_id), notice: "Review was added successfully!"
     else
+      @star_collection = Review::STARS
       render :new
     end
   end

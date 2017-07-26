@@ -39,22 +39,22 @@
                   <%= link_to "Sign Out", destroy_user_session_path, method: :delete, style: 'background: #B22222;' %>
                 </li>
               <% else %>
-                <li class="nav-button">
+                <li>
                   <%= link_to 'Sign In', new_user_session_path, style: 'background: #B22222;' %>
                 </li>
-                <li class="nav-button">
+                <li>
                   <%= link_to 'Sign Up', new_user_registration_path, style: 'background: #B22222;' %>
                 </li>
               <% end %>
             </li>
           </ul>
           <ul>
-            <li class="nav-button"><%= link_to 'Books', books_path, style: 'background: #B22222;' %></li>
+            <li><%= link_to 'Books', books_path, style: 'background: #B22222;' %></li>
               <section class="top-bar-section">
                 <ul class="center">
                   <div class="search-bar">
                     <%= form_tag books_path, method: 'get' do %>
-                      <li style="background: #b22222;">
+                      <li class='bar'style="background: #b22222;">
                         <%= text_field_tag :search, params[:search] %>
                       </li>
                       <li style="background: #b22222;"f>

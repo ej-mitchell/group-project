@@ -1,11 +1,11 @@
 .book-home-tile{
   text-align: center;
-  background: white;
+  background: #FEFFF1;
   padding-top: 10px;
   padding-bottom: 10px;
   text: white;
   width: 300px;
-  box-shadow: 10px 10px 5px #484848;
+  box-shadow: 15px 15px 10px #484848;
 }
 
 .top-bar{
@@ -19,8 +19,8 @@ body{
 .book-tile{
   text-align: center;
   width: 500px;
-  background: white;
-  box-shadow: 10px 10px 5px #484848;
+  background: #FEFFF1;
+  box-shadow: 15px 15px 10px #484848;
 }
 
 p{
@@ -44,6 +44,59 @@ p{
   height: 30px;
   padding-top: 10px;
 }
-.search-bar{
-  background: #b22222;
+
+.bar{
+  width: 500px;
+  padding-right: 10px;
+  padding-left: 50px;
+}
+
+.review-rating{
+  width: 100px;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.review-text-body{
+  width: 600px;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.form-actions{
+  padding-left: 20px;
+}
+
+.book-body{
+  width: 600px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.book-author{
+  width: 600px;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.book-page-number{
+  width: 100px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.book-summary{
+  width: 600px;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.book-cover{
+  width: 500px;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.book-form{
+  text-align: center;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
-import BookShowTile from '../components/BookShowTile'
-import ReviewTile from '../components/ReviewTile'
-import { Link } from 'react-router'
+import BookShowTile from '../components/BookShowTile';
+import ReviewTile from '../components/ReviewTile';
+import { Link } from 'react-router';
 
 
 class BookShowContainer extends React.Component {

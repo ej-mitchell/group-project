@@ -1,5 +1,6 @@
 import 'babel-polyfill';
 import React from 'react';
+import { Link, Route, IndexRoute, Router, browserHistory } from 'react-router'; 
 import { mount } from 'enzyme';
 import jasmineEnzyme from 'jasmine-enzyme';
 

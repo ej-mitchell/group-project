@@ -1,5 +1,5 @@
 import React from 'react';
-import BookHomeTile from '../components/BookHomeTile'
+import BookHomeTile from '../components/BookHomeTile';
 
 class HomeIndexContainer extends React.Component {
   constructor(props) {

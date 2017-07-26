@@ -1,0 +1,6 @@
+<ul>
+  <h3> Your search for "<%= @search %>" returned: </h3>
+<% @search_results.each do |book| %>
+<li> <%= link_to book.title, book_path(book) %> </li>
+<% end %>
+</ul>

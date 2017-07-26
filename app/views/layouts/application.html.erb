@@ -15,7 +15,7 @@
       <nav class="top-bar" data-topbar role="navigate">
         <ul class="title-area">
           <li class="name">
-            <h1><a href="/"> Between the Covers </a></h1>
+            <h1><a class="company-name" href="/"> Between the Covers </a></h1>
             </h1>
           </li>
         </ul>
@@ -23,27 +23,33 @@
           <ul class="right">
             <li class="active">
               <% if user_signed_in? %>
+              <li class="picture" style='background: #B22222;'>
+                  <%= image_tag current_user.profile_photo %>
+              </li>
+              <li>
+                <%= link_to "Edit Account", edit_user_registration_path, style: 'background: #B22222;' %>
+              </li>
                 <li>
                   <% if current_user.admin? %>
                   <li>
-                    <%= link_to "All Books", users_path %>
-                    <%= link_to "All Reviews", reviews_path %>
+                    <%= link_to "All Books", users_path, style: 'background: #B22222;' %>
+                    <%= link_to "All Reviews", reviews_path, style: 'background: #B22222;' %>
                   </li>
                   <% end %>
-                  <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+                  <%= link_to "Sign Out", destroy_user_session_path, method: :delete, style: 'background: #B22222;' %>
                 </li>
               <% else %>
-                <li>
-                  <%= link_to 'Sign In', new_user_session_path %>
+                <li class="nav-button">
+                  <%= link_to 'Sign In', new_user_session_path, style: 'background: #B22222;' %>
                 </li>
-                <li>
-                  <%= link_to 'Sign Up', new_user_registration_path %>
+                <li class="nav-button">
+                  <%= link_to 'Sign Up', new_user_registration_path, style: 'background: #B22222;' %>
                 </li>
               <% end %>
             </li>
           </ul>
           <ul>
-            <li><%= link_to 'Books', books_path %></li>
+            <li class="nav-button"><%= link_to 'Books', books_path, style: 'background: #B22222;' %></li>
           </ul>
 
         </section>
@@ -52,7 +58,11 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <br><br>
-    <div id='react-app'></div>
+    <div class="row">
+      <div class="small-6 large-centered columns">
+        <div id='react-app'></div>
+      </div>
+    </div>
     <%= yield %>
     <div class="search-bar">
       <%= form_tag books_path, method: 'get' do %>

@@ -33,7 +33,7 @@ class HomeIndexContainer extends React.Component {
     })
     return (
       <div>
-        {bookHomeTiles}
+          {bookHomeTiles}
       </div>
 
     )

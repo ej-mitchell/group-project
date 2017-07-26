@@ -1,0 +1,40 @@
+.book-home-tile{
+  text-align: center;
+  border: 1px solid black;
+  background: white;
+  padding-top: 10px;
+}
+
+.top-bar{
+  background: #B22222;
+  height: 45px;
+}
+body{
+  background: #FFF8DC;
+}
+a{
+  background: #B22222;
+}
+
+.nav-button{
+  background: #B22222;
+}
+
+p{
+  color: black;
+}
+
+.company-name{
+  font-size: 30px;
+}
+
+.book-image{
+  width: 200px;
+}
+
+
+.picture{
+  width: 30px;
+  height: 30px;
+  padding-top: 10px;
+}

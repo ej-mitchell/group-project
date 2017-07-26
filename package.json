@@ -39,6 +39,7 @@
     "webpack-merge": "^4.1.0"
   },
   "devDependencies": {
+    "babel-polyfill": "^6.23.0",
     "enzyme": "^2.9.1",
     "jasmine-core": "^2.6.4",
     "jasmine-enzyme": "^3.6.1",

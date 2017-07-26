@@ -1,6 +1,5 @@
 import React from 'react';
 import BookTile from '../components/BookTile';
-import { Link } from 'react-router';
 
 
 class BookIndexContainer extends React.Component {

@@ -15,7 +15,7 @@
     <div class="review-rating">
       <%= f.label :rating, 'Rating' %>
       <div class="review-rating input">
-        <%= f.select :rating , ["", '1 Star', '2 Stars', '3 Stars', '4 Stars', '5 Stars'] %>
+        <%= f.select :rating, @star_collection %>
       </div>
     </div>
 

@@ -2,58 +2,57 @@
 
 /*All Pages*/
 
-body{
+body {
   background: #FFF8DC;
   font-family: 'Crimson Text', serif;
 }
 
-h2{
+h2 {
   font-family: 'Bellefair', serif;
 }
 
-h3{
+h3 {
   font-family: 'Bellefair', serif;
 }
 
-h4{
+h4 {
   font-family: 'Bellefair', serif;
 }
 
-h5{
+h5 {
   font-family: 'Bellefair', serif;
 }
 
-p{
+p {
   color: black;
   font-family: 'Bellefair', serif;
 }
 
-.top-bar{
+.top-bar {
   background: #B22222;
   height: 45px;
 }
 
-.company-name{
+.company-name {
   font-size: 40px;
   font-family: 'Bellefair', serif;
 }
 
-.bar{
+.bar {
   width: 500px;
   padding-right: 10px;
   padding-left: 50px;
 }
 
-.picture{
+.picture {
   width: 30px;
   height: 30px;
   padding-top: 10px;
 }
 
-
 /*Home Page*/
 
-.book-home-tile{
+.book-home-tile {
   text-align: center;
   background: #FEFFF1;
   padding-top: 10px;
@@ -63,11 +62,12 @@ p{
   box-shadow: 15px 15px 10px #484848;
 }
 
-.book-image{
+.book-image {
   width: 150px;
+  margin: auto;
 }
 
-.book-cover{
+.book-cover {
   width: 500px;
   padding-left: 10px;
   text-align: left;
@@ -75,13 +75,13 @@ p{
 
 /*Book Index Page*/
 
-.book-index{
+.book-index {
   font-family: 'Bellefair', serif;
 }
 
 /*Book Show Page*/
 
-.book-tile{
+.book-tile {
   text-align: center;
   width: 500px;
   background: #FEFFF1;
@@ -89,53 +89,64 @@ p{
   padding: 10px;
 }
 
-.book-tile-title{
+.book-tile-title {
   font-family: 'Bellefair', serif;
 }
 
-.show-cover{
+.show-cover {
   width: 200px;
 }
 
-.reviews{
+.reviews {
   text-align: center;
   width: 500px;
   box-shadow: 10px 10px 5px #484848;
   padding-bottom: 20px 10px 20px 10px;
   background: #FEFFF1;
+}
 
+.reviewed-by {
+  font-size: 21px;
+}
+
+.rating {
+  font-size: 17px;
+}
+
+.reviewed-on {
+  font-size: 17px;
 }
 
 /*New Book Form*/
 
-.book-form{
+.book-form {
   text-align: center;
 }
 
-.add-new-book{
+.add-new-book {
   font-family: 'Bellefair', serif;
   font-size: 40px;
 }
 
-.book-body{
+.book-body {
   width: 600px;
   padding-left: 20px;
   text-align: left;
 }
 
-.book-author{
+.book-author {
   width: 600px;
   padding-left: 10px;
   text-align: left;
 }
 
-.book-page-number{
+.book-page-number {
   width: 100px;
   padding-left: 20px;
   text-align: left;
 }
 
-.book-summary{
+.book-summary {
   width: 600px;
   padding-left: 10px;
   text-align: left;
@@ -143,27 +154,27 @@ p{
 
 /*Add Review Form*/
 
-.review-rating{
+.review-rating {
   width: 100px;
   padding-left: 10px;
   text-align: left;
 }
 
-.review-text-body{
+.review-text-body {
   width: 600px;
   padding-left: 10px;
   text-align: left;
 }
 
-.form-actions{
+.form-actions {
   padding-left: 20px;
 }
 
-.button{
+.button {
   background: #B22222;
 }
 
-.add-new-review{
+.add-new-review {
   font-family: 'Bellefair', serif;
   font-size: 50px;
 }
@@ -171,12 +182,12 @@ p{
 
 /*New User Form*/
 
-.form-inputs{
+.form-inputs {
   width: 300px;
   padding: 20px;
 }
 
-.sign-up{
+.sign-up {
   text-align: center;
   font-family: 'Bellefair', serif;
   font-size: 40px;
@@ -184,7 +195,7 @@ p{
 
 /*Sing In*/
 
-.log-in{
+.log-in {
   text-align: center;
   font-family: 'Bellefair', serif;
   font-size: 40px;

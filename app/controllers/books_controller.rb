@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   before_action :authorize_user, only: [:delete]
-  # before_action :authenticate_user, only: [:new, :create]
+  before_action :authenticate_user, only: [:new, :create]
 
   def index
     @book = Book.search(params[:search])
@@ -41,7 +41,7 @@ class BooksController < ApplicationController
   end
 
   private
-  
+
   def book_params
     params.require(:book).permit(:title, :author, :page_number, :summary, :cover_url, :user_id, :search, :field)
   end
@@ -52,5 +52,10 @@ class BooksController < ApplicationController
     end
   end
 
-
+  def authenticate_user
+    if !user_signed_in?
+      flash[:notice] = 'You must sign in or sign up.'
+      redirect_to new_user_session_path
+    end
+  end
 end

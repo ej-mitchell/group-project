@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :authorize_user, only: [:index, :destroy]
+  before_action :authenticate_user, only: [:new, :create]
 
   def index
     @reviews = Review.all
@@ -46,6 +47,13 @@ class ReviewsController < ApplicationController
   def authorize_user
     if !current_user.admin?
       raise ActionController::RoutingError.new("Not Found")
+    end
+  end
+
+  def authenticate_user
+    if !user_signed_in?
+      flash[:notice] = 'You must sign in or sign up.'
+      redirect_to new_user_session_path
     end
   end
 end

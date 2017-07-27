@@ -45,6 +45,13 @@ p{
   padding-top: 10px;
 }
 
+.up-selected {
+  background-color: lime;
+}
+
+.down-selected {
+  background-color: red;
+
 .bar{
   width: 500px;
   padding-right: 10px;

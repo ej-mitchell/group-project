@@ -1,34 +1,47 @@
 import React from 'react';
 import BookShowTile from '../components/BookShowTile';
-import ReviewsIndexContainer from './ReviewsIndexContainer';
+import ReviewTile from '../components/ReviewTile';
 
 
 class BookShowContainer extends React.Component {
   constructor(props) {
     super(props);
       this.state = {
-        bookId: this.props.params.id,
-        book: {}
+        book: {},
+        reviews: []
       }
   }
 
   componentDidMount() {
-    fetch(`/api/v1/books/${this.state.bookId}`)
+    let bookId = this.props.params.id;
+    fetch(`/api/v1/books/${bookId}`)
       .then(response => {
         return response.json()})
       .then(body => {
         let json = body;
-        this.setState({ book: json.book })
+        this.setState({ book: json.book, reviews: json.reviews })
     })
   }
 
   render() {
+    let mapOfReviews = this.state.reviews.map((review) => {
+      return (
+        <ReviewTile
+          key={review.id}
+          rating={review.rating}
+          created={review.created_at}
+          text={review.text_body}
+          user={review.user_id}
+        />
+      )
+
+    })
 
     if (this.props.params.id !== "new") {
       return (
         <div>
-        <div className="book-tile Book">
-          <h1>{this.state.book.title}</h1>
+        <div className="book-tile">
+          <h1 className='book-tile-title'>{this.state.book.title}</h1>
           <BookShowTile
             key={this.state.book.id}
             id={this.state.book.id}
@@ -39,9 +52,12 @@ class BookShowContainer extends React.Component {
             cover={this.state.book.cover_url}
           />
         </div>
-          <ReviewsIndexContainer
-            bookId={this.state.bookId}
-          />
+        <div>
+          <br></br>
+          <h3>Reviews</h3>
+          <a href={`/books/${this.props.params.id}/reviews/new`}>Add new review</a>
+          {mapOfReviews}
+        </div>
       </div>
       )
     } else {

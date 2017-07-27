@@ -9,8 +9,9 @@ const BookHomeTile = (props) => {
           <div className="book-home-tile">
             <h4>{props.title}</h4>
             <p>{props.author}</p>
-            <p>{props.created}</p>
-            <img className="book-image" src={props.image}></img>
+            <div className="book-image" >
+            <img src={props.image} ></img>
+          </div>
           </div>
           </Link>
         <br></br>

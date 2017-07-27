@@ -40,3 +40,11 @@ p{
   height: 30px;
   padding-top: 10px;
 }
+
+.up-selected {
+  background-color: lime;
+}
+
+.down-selected {
+  background-color: red;
+}

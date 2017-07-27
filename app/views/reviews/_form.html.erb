@@ -1,32 +1,33 @@
 <%= form_for [@book, @review] do |f| %>
+  <div class='column column-block'>
+    <% if @review.errors.any? %>
+      <div id="error_explanation-reviews">
+        <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
 
-  <% if @review.errors.any? %>
-    <div id="error_explanation-reviews">
-      <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
+        <ul>
+        <% @review.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-      <ul>
-      <% @review.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+    <div class="review-rating">
+      <%= f.label :rating, 'Rating' %>
+      <div class="review-rating input">
+        <%= f.select :rating, @star_collection %>
+      </div>
     </div>
-  <% end %>
 
-  <div class="review-rating">
-    <%= f.label :rating, 'Rating' %>
-    <div class="review-rating input">
-      <%= f.select :rating , ["", 1, 2, 3, 4, 5] %>    
+    <div class="review-text-body">
+      <%= f.label :text_body, "Text Body" %>
+      <div class="review-text-body input">
+        <%= f.text_area :text_body %>
+      </div>
     </div>
-  </div>
 
-  <div class="review-text_body">
-    <%= f.label :text_body, "Text Body" %>
-    <div class="review-text-body input">
-      <%= f.text_field :text_body %>
+    <div class="form-actions">
+      <%= f.submit 'Submit', class: 'button' %>
     </div>
-  </div>
-
-  <div class="form-actions">
-    <%= f.submit 'Submit', class: 'button' %>
   </div>
 <% end %>

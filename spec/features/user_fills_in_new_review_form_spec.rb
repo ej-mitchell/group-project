@@ -41,7 +41,7 @@ feature 'user fills out new review form' do
 
     visit new_book_review_path(book)
 
-    select(4, from: "Rating")
+    select("4 Stars", from: "Rating")
     fill_in "Text Body", with: "This is a good book."
 
     click_button "Submit"

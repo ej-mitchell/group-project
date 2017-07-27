@@ -41,7 +41,7 @@ class BookShowContainer extends React.Component {
       return (
         <div>
         <div className="book-tile">
-          <h1>{this.state.book.title}</h1>
+          <h1 className='book-tile-title'>{this.state.book.title}</h1>
           <BookShowTile
             key={this.state.book.id}
             id={this.state.book.id}
@@ -53,7 +53,8 @@ class BookShowContainer extends React.Component {
           />
         </div>
         <div>
-          <h1>Reviews</h1>
+          <br></br>
+          <h3>Reviews</h3>
           <a href={`/books/${this.props.params.id}/reviews/new`}>Add new review</a>
           {mapOfReviews}
         </div>

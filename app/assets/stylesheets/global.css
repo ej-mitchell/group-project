@@ -1,3 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family==Bellefair|Crimson+Text');
+
+/*All Pages*/
+
+body{
+  background: #FFF8DC;
+  font-family: 'Crimson Text', serif;
+}
+
+h2{
+  font-family: 'Bellefair', serif;
+}
+
+h3{
+  font-family: 'Bellefair', serif;
+}
+
+h4{
+  font-family: 'Bellefair', serif;
+}
+
+h5{
+  font-family: 'Bellefair', serif;
+}
+
+p{
+  color: black;
+  font-family: 'Bellefair', serif;
+}
+
+.top-bar{
+  background: #B22222;
+  height: 45px;
+}
+
+.company-name{
+  font-size: 40px;
+  font-family: 'Bellefair', serif;
+}
+
+.bar{
+  width: 500px;
+  padding-right: 10px;
+  padding-left: 50px;
+}
+
+.picture{
+  width: 30px;
+  height: 30px;
+  padding-top: 10px;
+}
+
+
+/*Home Page*/
+
 .book-home-tile{
   text-align: center;
   background: #FEFFF1;
@@ -8,63 +63,58 @@
   box-shadow: 15px 15px 10px #484848;
 }
 
-.top-bar{
-  background: #B22222;
-  height: 45px;
+.book-image{
+  width: 150px;
 }
-body{
-  background: #FFF8DC;
+
+.book-cover{
+  width: 500px;
+  padding-left: 10px;
+  text-align: left;
 }
+
+/*Book Index Page*/
+
+.book-index{
+  font-family: 'Bellefair', serif;
+}
+
+/*Book Show Page*/
 
 .book-tile{
   text-align: center;
   width: 500px;
   background: #FEFFF1;
   box-shadow: 15px 15px 10px #484848;
+  padding: 10px;
 }
 
-p{
-  color: black;
-}
-
-.company-name{
-  font-size: 30px;
-}
-
-.book-image{
-  width: 150px;
+.book-tile-title{
+  font-family: 'Bellefair', serif;
 }
 
 .show-cover{
   width: 200px;
 }
 
-.picture{
-  width: 30px;
-  height: 30px;
-  padding-top: 10px;
-}
-
-.bar{
+.reviews{
+  text-align: center;
   width: 500px;
-  padding-right: 10px;
-  padding-left: 50px;
+  box-shadow: 10px 10px 5px #484848;
+  padding-bottom: 20px 10px 20px 10px;
+  background: #FEFFF1;
+
 }
 
-.review-rating{
-  width: 100px;
-  padding-left: 10px;
-  text-align: left;
+/*New Book Form*/
+
+.book-form{
+  text-align: center;
 }
 
-.review-text-body{
-  width: 600px;
-  padding-left: 10px;
-  text-align: left;
-}
-
-.form-actions{
-  padding-left: 20px;
+.add-new-book{
+  font-family: 'Bellefair', serif;
+  font-size: 40px;
 }
 
 .book-body{
@@ -91,12 +141,51 @@ p{
   text-align: left;
 }
 
-.book-cover{
-  width: 500px;
+/*Add Review Form*/
+
+.review-rating{
+  width: 100px;
   padding-left: 10px;
   text-align: left;
 }
 
-.book-form{
+.review-text-body{
+  width: 600px;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.form-actions{
+  padding-left: 20px;
+}
+
+.button{
+  background: #B22222;
+}
+
+.add-new-review{
+  font-family: 'Bellefair', serif;
+  font-size: 50px;
+}
+
+
+/*New User Form*/
+
+.form-inputs{
+  width: 300px;
+  padding: 20px;
+}
+
+.sign-up{
   text-align: center;
+  font-family: 'Bellefair', serif;
+  font-size: 40px;
+}
+
+/*Sing In*/
+
+.log-in{
+  text-align: center;
+  font-family: 'Bellefair', serif;
+  font-size: 40px;
 }

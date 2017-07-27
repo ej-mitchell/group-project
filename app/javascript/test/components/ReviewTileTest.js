@@ -18,7 +18,7 @@ describe('ReviewTile', () => {
   })
 
   it ('should display the rating', () => {
-    expect(wrapper.find('h4').text()).toEqual('4');
+    expect(wrapper.find('h5').text()).toEqual('4');
   })
 
   it ('should display a user', () => {

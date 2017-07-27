@@ -3,6 +3,7 @@ import { Route, IndexRoute, Router, browserHistory } from 'react-router';
 import BookIndexContainer from '../containers/BookIndexContainer';
 import BookShowContainer from '../containers/BookShowContainer';
 import HomeIndexContainer from '../containers/HomeIndexContainer';
+import ReviewsIndexContainer from '../containers/ReviewsIndexContainer';
 
 const App = props => {
   return(

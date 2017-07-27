@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_many :books
   has_many :reviews
+  has_many :votes, through: :reviews
 
   mount_uploader :profile_photo, ProfilePhotoUploader
   validates :first_name, presence: true

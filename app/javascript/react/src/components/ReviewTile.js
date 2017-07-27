@@ -1,13 +1,17 @@
 import React from 'react';
 
 const ReviewTile = (props) => {
+
+  let year = props.created.substring(2, 4);
+  let month = props.created.substring(5, 7);
+  let day = props.created.substring(8, 10);
+  let formattedDate = `${month}/${day}/${year}`
+
   return (
-    <div>
-      <h4>{props.rating} <img src="/icons/star.png"/></h4>
-      <h5>username: {props.user}</h5>
-      <h4>Reviewed By: {props.user}</h4>
-      <h5>{props.rating} Stars</h5>
-      <p>{props.created}</p>
+    <div className='reviews'>
+      <h3 className='reviewed-by'><b>Reviewed By:</b> {props.user}</h3>
+      <h4 className='rating'><b>Rating: </b>{props.rating} Stars</h4>
+      <h5 className='reviewed-on'><b>Reviewed On:</b> {formattedDate}</h5>
       <p>{props.text}</p>
     </div>
   )

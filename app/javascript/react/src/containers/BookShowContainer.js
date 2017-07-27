@@ -27,8 +27,8 @@ class BookShowContainer extends React.Component {
     if (this.props.params.id !== "new") {
       return (
         <div>
-        <div className="book-tile Book">
-          <h1>{this.state.book.title}</h1>
+        <div className="book-tile">
+          <h1 className='book-tile-title'>{this.state.book.title}</h1>
           <BookShowTile
             key={this.state.book.id}
             id={this.state.book.id}
@@ -39,9 +39,12 @@ class BookShowContainer extends React.Component {
             cover={this.state.book.cover_url}
           />
         </div>
-          <ReviewsIndexContainer
-            bookId={this.state.bookId}
-          />
+        <div>
+          <br></br>
+          <h3>Reviews</h3>
+          <a href={`/books/${this.props.params.id}/reviews/new`}>Add new review</a>
+          {mapOfReviews}
+        </div>
       </div>
       )
     } else {

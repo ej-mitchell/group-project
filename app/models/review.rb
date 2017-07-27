@@ -9,6 +9,7 @@ STARS = [
 
   belongs_to :user
   belongs_to :book
+  has_many :votes
 
   validates :rating, presence: true
   validates :text_body, presence: true

@@ -17,10 +17,46 @@ class ReviewsIndexContainer extends React.Component {
       this.downSelectedId = this.downSelectedId.bind(this);
   }
 
+  upPost(payload) {
+    let jsonPayload = JSON.stringify(payload)
+    fetch(`/reviews/${payload.review_id}/votes`, {
+      method: 'POST',
+      credentials: "same-origin",
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: jsonPayload
+    })
+    .then(response => {
+      response.json()
+    })
+
+  }
+
+  downPost(payload) {
+    let jsonPayload = JSON.stringify(payload)
+    fetch(`/reviews/${payload.review_id}/votes`, {
+      method: 'POST',
+      credentials: "same-origin",
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: jsonPayload
+    })
+    .then(response => {
+      response.json()
+    })
+
+  }
+
   upSelectedId(id) {
     if(!this.state.upSelectedId.includes(id)) {
+      this.upPost({review_id: id, value: 1});
       this.setState({ upSelectedId: [...this.state.upSelectedId, id] })
     } else {
+      this.upPost({review_id: id, value: 0})
       let index = this.state.upSelectedId.indexOf(id);
       this.state.upSelectedId.splice(index, 1)
       this.setState({ upSelectedId: this.state.upSelectedId })
@@ -29,10 +65,11 @@ class ReviewsIndexContainer extends React.Component {
   }
 
   downSelectedId(id) {
-    console.log("You clicked the down thing!")
     if(!this.state.downSelectedId.includes(id)) {
+      this.downPost({review_id: id, value: -1});
       this.setState({ downSelectedId: [...this.state.downSelectedId, id] })
     } else {
+      this.downPost({review_id: id, value: 0})
       let index = this.state.downSelectedId.indexOf(id);
       this.state.downSelectedId.splice(index, 1)
       this.setState({ downSelectedId: this.state.downSelectedId })

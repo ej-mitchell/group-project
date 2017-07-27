@@ -16,11 +16,12 @@ Rails.application.routes.draw do
   end
 
   resources :reviews, only: [:index, :destroy] do
-    resources :votes, only: [:new, :create, :edit, :update]
+    resources :votes, only: [:new, :create]
   end
 
   namespace :api do
     namespace :v1 do
+      resources :votes, only: [:index, :show, :create]
       resources :books, only: [:index, :show]
       resources :reviews, only: [:index, :show]
     end

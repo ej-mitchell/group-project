@@ -25,7 +25,7 @@ h5 {
 
 p {
   color: black;
-  font-family: 'Bellefair', serif;
+  font-family: 'Crimson Text', serif;
 }
 
 .top-bar {
@@ -71,7 +71,6 @@ p {
   width: 500px;
   padding-left: 10px;
   text-align: left;
-}
 
 /*Book Index Page*/
 
@@ -115,7 +114,6 @@ p {
 
 .reviewed-on {
   font-size: 17px;
-}
 
 /*New Book Form*/
 

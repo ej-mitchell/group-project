@@ -98,6 +98,7 @@ class ReviewsIndexContainer extends React.Component {
       return (
         <div>
           <h1>Reviews</h1>
+          <a href={`/books/${this.state.bookId}/reviews/new`}>Add new review</a>
           {mapOfReviews}
         </div>
       )

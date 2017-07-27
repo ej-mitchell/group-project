@@ -1,4 +1,4 @@
-.book-home-tile{
+.book-home-tile {
   text-align: center;
   background: #FEFFF1;
   padding-top: 10px;
@@ -8,11 +8,12 @@
   box-shadow: 15px 15px 10px #484848;
 }
 
-.top-bar{
+.top-bar {
   background: #B22222;
   height: 45px;
 }
-body{
+
+body {
   background: #FFF8DC;
 }
 
@@ -51,6 +52,7 @@ p{
 
 .down-selected {
   background-color: red;
+}
 
 .bar{
   width: 500px;

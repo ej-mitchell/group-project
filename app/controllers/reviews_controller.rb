@@ -18,7 +18,7 @@ class ReviewsController < ApplicationController
 
     if @review.save
       ReviewMailer.new_review(@review).deliver_now
-      redirect_to book_path(@review.book_id), notice: "Review was added successfully!"
+      redirect_to book_path(@book.id), notice: "Review was added successfully!"
     else
       @star_collection = Review::STARS
       render :new

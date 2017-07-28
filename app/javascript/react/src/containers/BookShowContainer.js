@@ -18,7 +18,7 @@ class BookShowContainer extends React.Component {
         return response.json()})
       .then(body => {
         let json = body;
-        this.setState({ book: json.book })
+        this.setState({ book: json.reviews[0].book })
     })
   }
 

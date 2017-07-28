@@ -89,7 +89,6 @@ class ReviewsIndexContainer extends React.Component {
     }
 
   render() {
-    console.log(this.state)
     let mapOfReviews = this.state.reviews.map((review) => {
       let selectUp = () => this.upSelectedId(review.id)
       let selectDown = () => this.downSelectedId(review.id)
@@ -117,6 +116,7 @@ class ReviewsIndexContainer extends React.Component {
             created={review.created_at}
             text={review.text_body}
             user={review.user_id}
+            username={review.username}
           />
 
           <UpvoteButton

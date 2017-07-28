@@ -24,11 +24,7 @@ describe('BookHomeTile', () => {
   })
 
   it('should have an author', () => {
-    expect(wrapper.find('h5').text()).toEqual("JK Rowling");
-  })
-
-  it('should have a date', () => {
-    expect(wrapper.find('p').text()).toEqual("now");
+    expect(wrapper.find('p').text()).toEqual("JK Rowling");
   })
 
   it('should render an img tag with the specific props', () => {

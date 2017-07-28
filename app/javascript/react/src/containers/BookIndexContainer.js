@@ -32,7 +32,7 @@ class BookIndexContainer extends React.Component {
 
     return (
       <div>
-        <h1>Books by Title</h1>
+        <h1 className='book-index'>Books by Title</h1>
         <a href={`/books/new`}>Add Book</a>
         {bookMap}
       </div>
